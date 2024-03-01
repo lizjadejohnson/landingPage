@@ -68,8 +68,7 @@
               </div>
               <button type="submit" class="loginbutton">LOGIN</button>
             </form>
-
-            <div class="createlink"><a href=""> Create account</a></div>
+            <a href="#popupForm" class="showForm"> Create account</a>
           </div>
         </span>
       </div>
@@ -193,7 +192,62 @@
         </div>
       </div>
     </div>
-
     <script src="app.js"></script>
+
+    <!-- POPUP REGISTRATION: -->
+    <div id="popupForm" class="popup">
+      <div class="popup-content">
+        <a href="#" class="close">&times;</a>
+        <h2>Create An Account</h2>
+        <form action="/signup" method="post">
+          <div class="namereg">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="emailreg">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <br />
+          <div class="passwordreg">
+            <label for="regpassword">Password:</label>
+            <input
+              type="password"
+              id="regpassword"
+              name="password"
+              required
+            /><br />
+            <label for="regpasswordconfirm">Confirm Password:</label>
+            <input
+              type="password"
+              id="regpasswordconfirm"
+              name="password"
+              required
+            />
+          </div>
+          <br />
+          <fieldset class="dietOptions">
+            <legend>Dietary Options:</legend>
+            <div class="checkbox-container">
+              <input type="checkbox" id="vegan" name="dietOption" />
+              <label for="vegan">Vegan</label>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="vegetarian" name="dietOption" />
+              <label for="vegetarian">Vegetarian</label>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="glutenfree" name="dietOption" />
+              <label for="glutenfree">Gluten Free</label>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="lactose" name="dietOption" />
+              <label for="lactose">Lactose</label>
+            </div>
+          </fieldset>
+          <button type="submit" class="registrationButton">Sign Up</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

@@ -34,12 +34,16 @@
 }
 
 .dropdown-login {
+  opacity: 0;
+  visibility: hidden;
   text-align: center;
-  display: none;
+  display: block;
   position: absolute;
   padding-top: 10%;
   padding: 35%;
   right: 20%;
+
+  transition: visibility 0s 0.5s, opacity 0.5s ease;
 }
 
 /* Show the other dropdown content on hover */
@@ -49,8 +53,12 @@
 
 /* Show the --login-- dropdown content on hover */
 .dropdown:hover .dropdown-login {
+  visibility: visible; /* Make visible immediately on hover */
+  opacity: 1; /* Fade to fully opaque */
+  transition-delay: 0s; /* Apply transition delay for visibility to 0s when hovering */
   display: block;
   background-color: #fff9f9;
+  box-shadow: 4px 11px 16px 0px rgba(0, 0, 0, 0.492);
 }
 
 /* Style the elements inside the dropdown */
@@ -73,7 +81,8 @@
   padding-top: 10%;
 }
 
-.loginbutton {
+.loginbutton,
+.registrationButton {
   background-color: #1baa43;
   color: #f4f4f4;
   cursor: pointer;
@@ -82,7 +91,8 @@
   margin-top: 5%;
 }
 
-.loginbutton:hover {
+.loginbutton:hover,
+.registrationButton:hover {
   background-color: #22cf53;
 }
 
@@ -94,7 +104,7 @@
   margin-bottom: 10%;
 }
 
-.loginform input[type="text"]:hover {
+.loginform input:hover {
   border: solid rgb(0, 145, 44) 2px;
 }
 
@@ -137,7 +147,7 @@
   text-align: center;
   text-transform: uppercase;
   padding-top: 4em;
-  font-family: "Anton";
+  font-family: "Anton", "Times New Roman", serif;
 }
 
 .herocontainer {
@@ -152,7 +162,7 @@
 
 .headline {
   font-size: 3rem;
-  font-family: "Anton";
+  font-family: "Anton", "Times New Roman", serif;
   color: white;
   text-align: center;
   text-shadow: 1px 1px 2px black;
@@ -166,7 +176,7 @@
   padding: 10%;
   /* padding-top: 10%; */
   text-align: center;
-  font-family: "Anton";
+  font-family: "Anton", "Times New Roman", serif;
   color: #fdffe4;
   text-shadow: #1baa43 1px 1px 10px;
   font-size: 2em;
@@ -220,8 +230,10 @@
 
 #proudTitle {
   background-color: #d9ffd736;
-  font-family: "Anton";
-  border: solid green 5px;
+  font-family: "Anton", "Times New Roman", serif;
+  box-shadow: 0px 0px 34px 0px rgba(8, 158, 0, 1);
+  border: 7px solid #1d8f00;
+  border-radius: 200px 0px 200px 10px;
 }
 
 .ecoCardsContainer {
@@ -254,9 +266,10 @@
   justify-content: space-around; /* Space out the cards evenly */
   align-items: center;
   background-color: rgba(23, 85, 0, 0.041);
+  border: 9px solid #ffffff;
   padding: 5%;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .ecoCard {
@@ -363,4 +376,115 @@
   padding: 1em;
   cursor: pointer;
   width: 27%; /* Adjust button width as needed */
+}
+
+/* Sign Up PopUp: */
+.popup {
+  display: none; /* Hide popup by default */
+  position: fixed; /* Use fixed positioning */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.292); /* Black background with opacity */
+  z-index: 1000; /* Ensure it's above all other content */
+  justify-content: center;
+  align-items: center;
+}
+
+.popup:target {
+  display: flex; /* Display popup when targeted */
+}
+
+.popup-content {
+  font-family: "Oswald";
+  font-weight: 400;
+  background: rgb(245, 255, 250);
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 400px; /* Adjust width as necessary */
+  box-shadow: 2px 2px 12px 6px rgba(0, 0, 0, 0.747);
+}
+
+.popup-content h2 {
+  font-family: "Anton", "Times New Roman", serif;
+  color: #000000b3;
+  text-shadow: #015c1481 5px 5px 10px;
+  margin-bottom: 7%;
+}
+
+.dietOptions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.close {
+  float: right;
+  font-size: 3em;
+  color: #1baa43;
+  text-decoration: none;
+  margin-top: -10%;
+  margin-right: -3%;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Media query for small screens */
+@media (max-width: 500px) {
+  .dietOptions {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly; /* Ensures spacing is distributed evenly */
+  }
+
+  .checkbox-container {
+    font-size: 0.9em;
+    width: 45%; /* Each container takes up roughly half the fieldset width */
+    margin-bottom: 15px; /* Increase bottom margin on smaller screens */
+  }
+
+  .tasteContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .tasteLeft img {
+    width: 100%;
+  }
+
+  .ecoImgCont {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .topEcoCard .ecoImgCont img {
+    width: 100%; /* Adjust the width so that 2 images fit in a row */
+    border-radius: 3%;
+  }
+
+  .bottomEcoCards {
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+  }
+  #proudTitle {
+    font-size: 1em;
+    margin-bottom: 2em;
+  }
+  .socialContainer {
+    flex-direction: column;
+  }
+  .socialCard {
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 10%;
+  }
 }
