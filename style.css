@@ -30,17 +30,72 @@
 .dropdown-content {
   display: none;
   position: absolute;
+  padding-top: 10%;
 }
 
-/* Style the links inside the dropdown */
+.dropdown-login {
+  text-align: center;
+  display: none;
+  position: absolute;
+  padding-top: 10%;
+  padding: 35%;
+  right: 20%;
+}
+
+/* Show the other dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Show the --login-- dropdown content on hover */
+.dropdown:hover .dropdown-login {
+  display: block;
+  background-color: #fff9f9;
+}
+
+/* Style the elements inside the dropdown */
+
 .dropdown-content a {
   padding: 0.3em;
   display: block;
 }
 
-/* Show the dropdown content on hover */
-.dropdown:hover .dropdown-content {
+.dropdown-login a {
+  padding: 0.3em;
   display: block;
+}
+
+.loginform {
+  padding-top: 10%;
+}
+
+.createlink {
+  padding-top: 10%;
+}
+
+.loginbutton {
+  background-color: #1baa43;
+  color: #f4f4f4;
+  cursor: pointer;
+  padding: 3%;
+  border: #ccc 1px;
+  margin-top: 5%;
+}
+
+.loginbutton:hover {
+  background-color: #22cf53;
+}
+
+.loginlogo {
+  padding-top: 5%;
+  text-align: center;
+}
+.loginemail {
+  margin-bottom: 10%;
+}
+
+.loginform input[type="text"]:hover {
+  border: solid rgb(0, 145, 44) 2px;
 }
 
 #left {
@@ -70,7 +125,7 @@
   text-decoration: underline;
 }
 
-/* Optionally, remove the margin from the last link to avoid extra spacing on the right end */
+/* remove the margin from the last link to avoid extra spacing on the right end */
 #right a:last-child {
   margin-right: 0;
 }
@@ -256,6 +311,7 @@
   background-size: cover;
   background-position: center;
   height: 60vh;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -296,6 +352,7 @@
   margin-bottom: 1em;
   width: 100%;
   border: 1px solid #ccc;
+  text-align: center;
 }
 
 .signUp {
