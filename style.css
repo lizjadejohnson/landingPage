@@ -1,0 +1,309 @@
+/* Nav Bar Styles: */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  vertical-align: baseline;
+  width: 100%;
+}
+
+.navsection {
+  font-size: 14px;
+  margin-top: 0.5em;
+  padding-left: 1em;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hide the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  padding: 0.3em;
+  display: block;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#left {
+  font-family: "Anton", "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: #575657;
+}
+
+#right {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: end;
+  padding-right: 5em;
+  font-size: 12px;
+  color: #575657;
+  letter-spacing: 0.05em;
+}
+
+#right a {
+  margin-right: 20px; /* Adjust the spacing to your preference */
+  color: #575657;
+  text-decoration: none;
+}
+
+#right a:hover {
+  text-decoration: underline;
+}
+
+/* Optionally, remove the margin from the last link to avoid extra spacing on the right end */
+#right a:last-child {
+  margin-right: 0;
+}
+
+/* Main Content Styles */
+
+.titlebar {
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 4em;
+  font-family: "Anton";
+}
+
+.herocontainer {
+  background-image: url("images/heroimg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headline {
+  font-size: 3rem;
+  font-family: "Anton";
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+  text-transform: uppercase;
+  width: 100%;
+  margin: 5%;
+  padding-right: auto;
+}
+
+.uspDescription {
+  padding: 10%;
+  /* padding-top: 10%; */
+  text-align: center;
+  font-family: "Anton";
+  color: #fdffe4;
+  text-shadow: #1baa43 1px 1px 10px;
+  font-size: 2em;
+  align-items: center;
+  height: 25%;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(30, 95, 0, 0.69),
+    rgb(231, 255, 247)
+  );
+}
+
+/* Taste Section */
+.tasteContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5% 5% 5% 0%;
+  background-color: rgb(251, 247, 243);
+  font-family: "Oswald";
+}
+
+.tasteLeft img {
+  width: 80%;
+}
+
+.tasteRight {
+  padding: 1rem;
+}
+
+.tasteTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.tasteDescription {
+  font-size: 1rem;
+}
+
+/* Eco Container */
+.ecoContainer {
+  padding: 2rem;
+}
+
+.ecoTitle {
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 5%;
+}
+
+#proudTitle {
+  background-color: #d9ffd736;
+  font-family: "Anton";
+  border: solid green 5px;
+}
+
+.ecoCardsContainer {
+  font-family: "Oswald";
+  display: flex;
+  flex-direction: column; /* Stack the lifecycle and emissions/community sections */
+}
+
+.topEcoCard {
+  display: flex; /* Align the lifecycle images in a row */
+  justify-content: space-between; /* Space out the images evenly */
+  margin-bottom: 1rem;
+}
+
+.ecoImgCont {
+  display: flex; /* images within the container are also in a row */
+  justify-content: space-between; /* Space out the images evenly */
+  flex-wrap: wrap;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.topEcoCard .ecoImgCont img {
+  width: 48%; /* Adjust the width so that 2 images fit in a row */
+  border-radius: 3%;
+}
+
+.bottomEcoCards {
+  display: flex;
+  justify-content: space-around; /* Space out the cards evenly */
+  align-items: center;
+  background-color: rgba(23, 85, 0, 0.041);
+  padding: 5%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.ecoCard {
+  text-align: center;
+  margin: 1rem;
+  height: 100%;
+}
+
+.ecoImgCont img {
+  width: 100%; /*images here fill width of cards */
+  margin-bottom: 1rem;
+  border-radius: 3%;
+}
+
+.ecoDesc {
+  font-size: 1rem;
+  padding: 5% 10% 5% 10%;
+}
+
+/* Social Proof */
+.socialContainer {
+  font-family: "Oswald";
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.socialCard {
+  width: 30%;
+  padding: 5%;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.socialContainer :hover {
+  background-color: #ceebc9;
+}
+
+.socialcardBody {
+  padding-bottom: 15%;
+}
+
+.socialcardName {
+  align-self: flex-end;
+}
+
+/* Call to Action */
+.actionContainer {
+  background-image: url("/images/signUp.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionLeft img {
+  width: 30vh;
+}
+
+.actionRight {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.actionRightSignUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.actionRightBlurb {
+  font-family: "Anton";
+  font-size: 1.5em;
+  color: #fffef6;
+  text-shadow: 5px 5px 15px black;
+  padding-bottom: 10%;
+}
+
+.signUpEmail input {
+  padding: 1em;
+  background-color: #f1ffee;
+  margin-bottom: 1em;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.signUp {
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: #1baa43;
+  border: solid rgba(170, 255, 174, 0.673);
+  padding: 1em;
+  cursor: pointer;
+  width: 27%; /* Adjust button width as needed */
+}
