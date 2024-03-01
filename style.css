@@ -252,7 +252,7 @@
 
 /* Call to Action */
 .actionContainer {
-  background-image: url("/images/signUp.jpg");
+  background-image: url("images/signUp.jpg");
   background-size: cover;
   background-position: center;
   height: 60vh;
