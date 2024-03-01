@@ -57,17 +57,18 @@
               </div>
               <div class="logintitle">LOGIN</div>
             </div>
-            <div class="loginform">
+            <form class="loginform" action="/login" method="post">
               <div class="loginemail">
-                <div>Email address</div>
-                <input type="text" />
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" required />
               </div>
               <div class="loginpass">
-                <div>Password</div>
-                <input type="text" />
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
               </div>
-              <button class="loginbutton">LOGIN</button>
-            </div>
+              <button type="submit" class="loginbutton">LOGIN</button>
+            </form>
+
             <div class="createlink"><a href=""> Create account</a></div>
           </div>
         </span>
